@@ -42,11 +42,6 @@ void loop() {
       // Your Domain name with URL path or IP address with path
       http.begin(serverName);
 
-      // Specify content-type header
-      // Data to send with HTTP POST
-      String httpRequestData = "api_key=tPmAT5Ab3j7F9&sensor=BME280&value1=24.25&value2=49.54&value3=1005.14";
-      String request = "{\"data\": {\"id\": null, \"type\": \"match-user-requests\", \"attributes\": { \"title\": \"Mr\", \"first-name\": \"Iouproe\", \"surname\": \"Euahi\", \"match-type\": \"match-by-customer-reference\", \"customer-reference\": \"851001224460\" } } }";
-
       // If you need an HTTP request with a content type: text/plain
       http.addHeader("Content-Type", "application/json");
       int httpResponseCode = http.POST("{\"name\": \"iot-project\"}");
